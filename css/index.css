@@ -1042,6 +1042,7 @@ dd a{
     left:0;
     top:0;
     z-index:2;
+    margin-left:105px;
     display: none;
 }
 .nanzhuang{
@@ -1052,6 +1053,7 @@ dd a{
       z-index:2;
       left:0;
        top:0;
+       margin-left:105px;
      display:none;
   }
   .span1{
