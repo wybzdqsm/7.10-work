@@ -20,7 +20,7 @@
 <div class="nav">
     <div class="container">
         <p class="nav-left">
-          <em>喵，欢迎来到天猫</em>
+          <em>如有侵权，立马删除</em>
           <a href="" class="login">请登录</a>
           <a href="" class="zhuce">免费注册</a>
         </p>
@@ -344,7 +344,7 @@
                
             </div>
                <ul class="btn">
-                <li></li>
+                <li style="background: blue;"></li>
                 <li></li>
                 <li></li>
                 <li></li>
@@ -907,21 +907,22 @@
                         this.style.color = "#fff";
                     }
                 }
+
                 var num1 = 0;
                 setInterval(function () {
                     num1++;
-                    if (num > links1.length - 1) {
-                        num = 0;
+                    if (num1 > links1.length - 1) {
+                        num1 = 0;
                     }
                     for (var j = 0; j < lists1.length; j++) {
                         lists1[j].style.display = "none";
                         links1[j].style.background = "#f1f1f1";
                         links1[j].style.color = "black"
                     }
-                    lists1[num].style.display = "block";
-                    links1[num].style.background = "#00b262";
-                    links1[num].style.color = "#fff";
-                }, 3000);
+                    lists1[num1].style.display = "block";
+                    links1[num1].style.background = "#00b262";
+                    links1[num1].style.color = "#fff";
+                }, 5000);
             </script>
             <div class="shop-list2-item">
                 <a href="">
@@ -1270,30 +1271,30 @@
     var btn=document.querySelectorAll(".btn li")
     var banner1=document.querySelectorAll(".banner1")
    
-    var num=0;
-    setInterval(function(){
-    //  num++;
-     if(num>banner1.length){
-         num=0;
-         for(var i=0;i<banner1.length;i++){
-             banner1[i].style.opacity=0;
-             banner1[i].style.zIndex=0;
+    var number=0;
+    // setInterval(function(){
+    // //  num++;
+    //  if(num>banner1.length){
+    //      num=0;
+    //      for(var i=0;i<banner1.length;i++){
+    //          banner1[i].style.opacity=0;
+    //          banner1[i].style.zIndex=0;
 
-         }
-     }
-     animate(banner1[num],{
-                   opacity:1
-               },300,Tween.Linear,function(){
-                   banner1[num].style.zIndex=1
-               })
+    //      }
+    //  }
+    //  animate(banner1[num],{
+    //                opacity:1
+    //            },300,Tween.Linear,function(){
+    //                banner1[num].style.zIndex=1
+    //            })
     
-    },3000)
+    // },3000)
    
    
   setInterval(function(){
-  num++;
-  if(num>btn.length-1){
-      num=0
+  number++;
+  if(number>btn.length-1){
+      number=0
   }
   for(var j=0;j<banner1.length;j++){
              
@@ -1301,15 +1302,15 @@
              btn[j].style.background="rgba("+255+","+255+","+255+","+1+")";
             
                }
-              banner1[num].style.display="block";
-             btn[num].style.background="blue";
+              banner1[number].style.display="block";
+             btn[number].style.background="blue";
 
    },3000)
       
    for(let i=0;i<btn.length;i++){
    
            btn[i].onclick=function(){
-            num=i;
+            number=i;
                for(var j=0;j<banner1.length;j++){
             banner1[j].style.display="none";
             btn[j].style.background="rgba("+255+","+255+","+255+","+1+")";
@@ -1340,18 +1341,18 @@
 
 
            }    
-        //    for(let i=0;i<title.length;i++){
-        //    content[i].onmouseover=function(){
-        //        for(var j=0;j<content.length;j++){
-        //      content[j].style.display="none";
-             
-        //        }
-        //       content[i].style.display="block";
+           for(let i=0;i<content.length;i++){
+           content[i].onmouseover=function(){
+               for(var j=0;j<content.length;j++){
+             content[j].style.display="none";
+
+               }
+               content[i].style.display="block";
               
-        //     }
+            }
 
-
-        //    }    
+           }      
+          
            
            for(let i=0;i<title.length;i++){
            title[i].onmouseout=function(){
@@ -1365,17 +1366,17 @@
             }
 
            }      
-        //    for(let i=0;i<content.length;i++){
-        //    content[i].onmouseout=function(){
-        //        for(var j=0;j<content.length;j++){
-        //      content[j].style.display="none";
+           for(let i=0;i<content.length;i++){
+           content[i].onmouseout=function(){
+               for(var j=0;j<content.length;j++){
+             content[j].style.display="none";
 
-        //        }
-        //        content[i].style.display="none";
+               }
+               content[i].style.display="none";
               
-        //     }
+            }
 
-        //    }      
+           }      
           
           
                var search=document.querySelector(".search1")

@@ -530,7 +530,7 @@ button{
 }
 
 .box a:nth-child(6){
-    background-image: url(../img/ban6.png);
+    background-image: url(../img/ban3.png);
 }
 .btn{
     position: absolute;
@@ -908,7 +908,7 @@ button{
 .bottom1{
     width: 1190px;
     height: 100px;
-    background: url(../img/bottom.jpg) no-repeat;
+    background: url(../img/bottom.png) no-repeat;
     margin: 25px auto;
     padding: 0;
 }
