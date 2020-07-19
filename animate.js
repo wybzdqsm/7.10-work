@@ -52,7 +52,9 @@ function css(obj,attr,val){
           case"border":
           return getComputedStyle(obj,null)[attr];
         break;
-          default:
+        case "scrollTop":
+            return  obj[attr];
+             default:
           return parseInt(getComputedStyle(obj,null)[attr])   
   }
 }
@@ -64,6 +66,8 @@ function css(obj,attr,val){
             case"opacity":
             obj.style[attr]=val;
           break;
+          case "scrollTop":
+            return  obj[attr]=val;
             default:
                 obj.style[attr]=val+="px"; 
   }
